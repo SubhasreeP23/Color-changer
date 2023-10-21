@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Changer</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        div{            
+            margin: 25px;
+            padding: 40px;
+            align-items: center;
+            display: flex;
+            justify-content:center;
+        }
+        .buttons{                       
+            padding: 50px;
+            margin: 10px;
+        }
+        #grey{
+            background-color: gray;
+            /* border: 2px dashed whitesmoke; */
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-box">
+        <span class="buttons"  id="grey"></span>
+        <span class="buttons" id="red"></span>
+        <span class="buttons" id="blue"></span>
+        <span class="buttons" id="green"></span>
+        <span class="buttons" id="yellow"></span>
+    </div>
+    <script>
+        //select buttons
+        const buttons=document.querySelectorAll(".buttons");
+        //select body where to disply
+        const body=document.querySelector("body");
+
+        //add EventListener
+        buttons.forEach((btn)=>{
+            btn.addEventListener("click",function(e){
+                console.log(e);
+                console.log(e.target);
+                console.log(e.target.id );
+                if(e.target.id==='grey'){
+                    // body.style.background='grey';
+                    body.style.background=e.target.id;
+                    btn.style.border='2px dashed';
+                }
+                if(e.target.id==='red'){
+                    // body.style.background='red';
+                    body.style.background=e.target.id;
+                    btn.style.border='2px dashed';
+                }
+                if(e.target.id==='blue'){
+                    // body.style.background='blue';
+                    body.style.background=e.target.id;
+                    btn.style.border='2px dashed';
+                }
+                if(e.target.id==='green'){
+                    // body.style.background='grey';
+                    body.style.background=e.target.id;
+                    btn.style.border='2px dashed';
+                }
+                if(e.target.id==='yellow'){
+                    // body.style.background='yellow';
+                    body.style.background=e.target.id;
+                    btn.style.border='2px dashed';
+                }
+            })
+        })
+    </script>
+</body>
+
+
+</html>
